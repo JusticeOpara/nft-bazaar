@@ -4,6 +4,7 @@ import { RiNftFill } from "react-icons/ri";
 import { RxAvatar } from "react-icons/rx";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Container from "./Container";
+import {Link} from "react-router-dom"
 
 
 
@@ -24,9 +25,10 @@ export default function Navbar() {
                     </div>
 
                     <div className='flex gap-6 bg-skjy-500 text-lg font-semibold items-center text-center'>
-                        <p>Home</p>
-                        <p> Drops</p>
-                        <p>Stats </p>
+                        <p><Link to="/">Home</Link></p>
+                        
+                        <p><Link to="/collection">Collection </Link></p>
+                        <p> <Link to="/stats">Stats </Link> </p>
                     </div>
 
                     <div className="border-[1px] w-full md:w-auto py-2 rounded-[16px] shadow-sm hover:shadow-md transition cursor-pointer bg-amber-500">
