@@ -10,13 +10,14 @@ import { FaEthereum } from "react-icons/fa"
 import { TbCurrencySolana } from "react-icons/tb"
 import Carousel from "./Carousel"
 import Feautures from "./Feautures"
-
+import Questions from "./Questions"
+import Footer from "./Footer"
 
 
 export default function Home() {
     return (
         <Container>
-            <div className="mb-8 font-poppins">
+            <div className=" font-poppins">
 
 
                 <div className="flex justify-between mt-[120px]  bg-slate-400 h-[80vh] ">
@@ -82,7 +83,9 @@ export default function Home() {
 
                 </div >
                 <Carousel />
-                <Feautures/>
+                <Feautures />
+                <Questions />
+                <Footer />
             </div>
         </Container>
     )

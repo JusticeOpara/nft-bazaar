@@ -66,7 +66,7 @@ export default function Navbar() {
                                 <div className="hidden md:block">
 
 
-                                    <RxAvatar size={30} claasName="rounded-full" />
+                                    <RxAvatar size={30} className="rounded-full" />
 
                                 </div>
                             </div>
