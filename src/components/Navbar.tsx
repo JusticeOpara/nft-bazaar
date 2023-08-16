@@ -4,7 +4,7 @@ import { RiNftFill } from "react-icons/ri";
 import { RxAvatar } from "react-icons/rx";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Container from "./Container";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
@@ -14,19 +14,23 @@ export default function Navbar() {
     return (
 
         <div className=" py-4 border-b-[1px] bg-slate-400 fixed w-full top-0 left-0 z-[111111]">
-      
+
 
             <Container>
 
                 <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 bg-bluue-500">
-                    <div className='flex items-center'>
-                        <RiNftFill size={50} />
-                        <span className='font-extrabold text-xl'>NFT Bazaar</span>
-                    </div>
+                    {/* <div className=''> */}
+                        <Link to="/" className='flex items-center'>
+                            <RiNftFill size={50} />
+                            <span className='font-extrabold text-xl'>NFT Bazaar</span>
+                        </Link>
+
+
+                    {/* </div> */}
 
                     <div className='flex gap-6 bg-skjy-500 text-lg font-semibold items-center text-center'>
                         <p><Link to="/">Home</Link></p>
-                        
+
                         <p><Link to="/collection">Collection </Link></p>
                         <p> <Link to="/stats">Stats </Link> </p>
                     </div>

@@ -91,7 +91,7 @@ const Footer = () => {
                 <div className=" mt-4 text-center">
                     <p className="copyright">
                         {" "}
-                        Copyrights 2022, Developed by Muhibur Rahman. @Muhib's Tech Diary
+                        Copyrights 2022, Developed by JustScript.com
                         All Rights Reserved.{" "}
                     </p>
                 </div>
