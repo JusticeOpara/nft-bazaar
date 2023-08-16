@@ -36,7 +36,7 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      <div>
+      <div className='font-poppins'>
         <Navbar />
 
         <Routes>

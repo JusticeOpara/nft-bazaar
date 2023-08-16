@@ -1,8 +1,9 @@
+import React from "react"
 // import img1 from "../assets/images/img13.webp"
 // import img2 from "../assets/images/blink.webp"
 import img from "../assets/images/img05.avif"
 
-const Feautures = () => {
+const Feautures:React.FC = () => {
 
 
     return (

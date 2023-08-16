@@ -22,7 +22,7 @@ export default function Navbar() {
                     {/* <div className=''> */}
                         <Link to="/" className='flex items-center'>
                             <RiNftFill size={50} />
-                            <span className='font-extrabold text-xl'>NFT Bazaar</span>
+                            <span className='font-extrabold text-xl hero'>NFT Bazaar</span>
                         </Link>
 
 

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React,{ useState } from "react"
 
 interface CollapsibleProps {
     question: string,
@@ -52,7 +52,8 @@ const Collapsible: React.FC<CollapsibleProps> = ({ question, answer }) => {
 }
 
 
-export default function Questions() {
+// Collection: React.FC
+const Questions:React.FC = () =>{
 
     return (
 
@@ -104,3 +105,4 @@ export default function Questions() {
 
     )
 }
+export default Questions

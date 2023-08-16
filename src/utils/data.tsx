@@ -7,8 +7,9 @@ import img06 from "../assets/images/img06.avif";
 import img07 from "../assets/images/img07.avif";
 import img08 from "../assets/images/img08.avif";
 import img09 from "../assets/images/img15.avif";
-import img10 from "../assets/images/im10.avif"
-import img11 from "../assets/images/img11.avif"
+import img10 from "../assets/images/im10.avif";
+import img11 from "../assets/images/img11.avif";
+import azra from "../assets/images/Azra.webp"
 
 
 import ava01 from "../assets/images/ava-01.png";
@@ -125,4 +126,46 @@ export const Categories:Category[]= [
         creatorImg: ava05,
         currentBid: 5.89,
     },
+];
+
+
+interface Nfts{
+    title:string,
+    imgUrl:string,
+    floor:number,
+
+}
+export const Nfts:Nfts[]=[
+
+    {
+        title:"Azra Games - The Hopeful",
+        imgUrl:azra,
+        floor: 5.436
+    },
+    {
+        title:"Azra Games - The Hopeful",
+        imgUrl:img11,
+        floor: 5.436
+    },
+    {
+        title:"Azra Games - The Hopeful",
+        imgUrl:img01,
+        floor: 5.436
+    },
+    {
+        title:"",
+        imgUrl:azra,
+        floor: 5.436
+    },
+    {
+        title:"",
+        imgUrl:azra,
+        floor: 5.436
+    },
+    {
+        title:"",
+        imgUrl:azra,
+        floor: 5.436
+    }
+
 ];

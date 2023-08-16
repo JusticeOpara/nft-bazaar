@@ -1,12 +1,14 @@
+import React from "react"
 
 
-export default function Carousel() {
+const Carousel: React.FC = () => {
+
   return (
     <div className="flex  flex-col justify-between  mt-3 bg-slate-400 w-[100%] h-[90vh]">
 
-      <div className="flex flex-col items-center text-center gap-1 w-full">
+      <div className="flex flex-col items-center text-center gap-1 w-full font-poppins">
         <h1 className="text-4xl  font-bold">Own Your NFT</h1>
-        <p className="text-[18px] font-medium max-w-[760px] ">
+        <p className="text-[16px] font-medium max-w-[760px]  ">
           Bazzar is the only place you can collect, buy, and sell digtial items ,
           crypto colectibles and non-fungible token. NFTS (non-Fungible Tokens) have gained sigincant popuarity.
         </p>
@@ -26,3 +28,4 @@ export default function Carousel() {
     </div>
   )
 }
+export default Carousel
