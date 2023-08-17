@@ -1,5 +1,4 @@
-// import { useEffect } from 'react';
-// import axios from 'axios';
+
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Stats from './components/Stats';
