@@ -3,6 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { RiNftFill } from "react-icons/ri";
 import { RxAvatar } from "react-icons/rx";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BiWallet } from "react-icons/bi"
 import Container from "./Container";
 import { Link } from "react-router-dom"
 
@@ -13,36 +14,35 @@ export default function Navbar() {
 
     return (
 
-        <div className=" py-4 border-b-[1px] bg-slate-400 fixed w-full top-0 left-0 z-[111111]">
+        <div className=" py-4 border-b-[1px] bg-black fixed w-full top-0 left-0 z-[111111]">
 
 
             <Container>
 
-                <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 bg-bluue-500">
+                <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 text-white">
                     {/* <div className=''> */}
-                        <Link to="/" className='flex items-center'>
-                            <RiNftFill size={50} />
-                            <span className='font-extrabold text-xl hero'>NFT Bazaar</span>
-                        </Link>
+                    <Link to="/" className='flex items-center'>
+                        <RiNftFill size={50} />
+                        <span className='font-extrabold text-xl hero'>NFT Bazaar</span>
+                    </Link>
 
 
                     {/* </div> */}
 
-                    <div className='flex gap-6 bg-skjy-500 text-lg font-semibold items-center text-center'>
-                        <p><Link to="/">Home</Link></p>
+                    <div className='flex gap-6 text-lg font-semibold items-center text-center '>
 
-                        <p><Link to="/collection">Collection </Link></p>
-                        <p> <Link to="/stats">Stats </Link> </p>
+                        <p className='hover:text-[#e250e5]'><Link to="/collection">Collection </Link></p>
+                        <p className='hover:text-[#e250e5]'> <Link to="/stats">Stats </Link> </p>
                     </div>
 
-                    <div className="border-[1px] w-full md:w-auto py-2 rounded-[16px] shadow-sm hover:shadow-md transition cursor-pointer bg-amber-500">
+                    <div className="border-[1px] w-full md:w-auto py-[5px] rounded-[16px] shadow-sm hover:shadow-md transition cursor-pointer">
 
-                        <div className="flex flex-row  items-center  justify-between" >
+                        <div className="flex flex-row items-center justify-between" >
                             <div className=" text-sm  font-semibold px-10">
                                 Anywhere
                             </div>
-                            <div className=" hidden  sm:block  text-sm  font-semibold  px-10 border-x-[1px] flex-1  text-center">
-                                Any week
+                            <div className=" hidden  sm:block  text-sm  font-semibold  px-10  flex-1  text-center">
+                           Any week
                             </div>
                             <div className="text-sm pl-6 pr-2  text-gray-600 flex flex-row items-center gap-3">
                                 <div className="hidden sm:block">Add Guest</div>
@@ -60,10 +60,14 @@ export default function Navbar() {
                     {/* <Search /> */}
                     <div className="relative ">
                         <div className="flex flex-row items-center gap-2">
-                            <div className="hidden md:block text-sm font-semibold py-3 px-4  rounded-fullhover:bg-neutral-100 transition cursor-pointer">
-                                <p className='text-base font-bold'>
+
+                            <div className='flex items-center py-[7px] px-[20px] border-[1px] border-[#5142fc] rounded-[50px]'>
+
+                                <BiWallet size={20} />
+                                <p className='text-sm font-medium flex'>
                                     Connect Wallet
                                 </p>
+
                             </div>
                             <div className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center  gap-3  rounded-full   cursor-pointer hover:shadow-md transition">
                                 <AiOutlineMenu />

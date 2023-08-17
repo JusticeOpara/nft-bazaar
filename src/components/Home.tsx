@@ -17,30 +17,32 @@ import Footer from "./Footer"
 export default function Home() {
     return (
         <Container>
-            <div className=" font-poppins">
-                <div className="flex justify-between mt-[120px]  bg-slate-400 h-[80vh] ">
+            <div className=" font-poppins text-white bg-[#212529]">
+                <div className="flex justify-between mt-[120px]   h-[80vh] ">
 
-                    <div className="w-[50%] flex flex-col gap-[20px] pt-4 bg-neutral-200">
+                    <div className="w-[50%] flex flex-col gap-[40px] pt-4 ">
+                        <div className="flex flex-col gap-2">
+                            <h2 className="text-[2.5rem] leading-[50px] font-bold font-poppins">
+                                Discover rare digital art and collect
+                                <span className="hero" > sell extraordinary</span> NFTs
 
-                        <h2 className="text-[2.5rem] leading-[50px] font-bold font-poppins">
-                            Discover rare digital art and collect
-                            <span className="hero" > sell extraordinary</span> NFTs
 
+                            </h2>
+                            <p className="text-base font-normal">
+                                Creating and make money in the market place has become a popular way to montize digital creations. To get started,
+                                you first need to create your own NFT(Non-Fungilbe Token).
+                            </p>
+                        </div>
 
-                        </h2>
-                        <p className="text-[18px] font-normal font-poppins">
-                            Creating and make money in the market place has become a popular way to montize digital creations. To get started,
-                            you first need to create your own NFT(Non-Fungilbe Token).
-                        </p>
 
                         <div className="flex gap-5  ">
-                            <button className="flex items-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-6 rounded-lg">
+                            <button className="flex items-center gap-2 bg-[#5142fc] text-white font-bold py-2.5 px-6 rounded-lg">
                                 <BsFillRocketFill />
                                 <a>Explore</a>
 
                             </button>
 
-                            <button className="flex items-center gap-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2.5 px-6 border border-blue-500 hover:border-transparent rounded-lg">
+                            <button className="flex items-center gap-2 bg-transparent hover:bg-[#5142fc] text-blue-700 font-semibold hover:text-white py-2.5 px-6 border border-[#5142fc] hover:border-transparent rounded-lg">
 
                                 <LiaPenAltSolid />
                                 <a>Create NFTs</a>
@@ -51,12 +53,12 @@ export default function Home() {
 
                     </div >
 
-                    <div className="w-[500px] bg-yellow-50">
+                    <div className="w-[500px]">
                         <img src={hero} alt="a picture of a bored ape NFT" className=" h-full w-full rounded-lg  " />
                     </div>
 
                 </div >
-                <div className="flex flex-col items-center w-full gap-3 mt-4 bg-blue-400">
+                <div className="flex flex-col items-center w-full gap-3 mt-10">
                     <p className="text-[25px] font-black">Our Amazing Partner</p>
 
                     <div className="flex items-center font-poppins w-full justify-evenly">
@@ -84,8 +86,6 @@ export default function Home() {
                             <SiBinance size={50} className="" />
                             <p className="font-bold text-xl">Binance</p>
                         </span>
-
-
 
                     </div>
 

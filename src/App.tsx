@@ -36,7 +36,7 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      <div className='font-poppins'>
+      <div className='font-poppins bg-[#212529]'>
         <Navbar />
 
         <Routes>

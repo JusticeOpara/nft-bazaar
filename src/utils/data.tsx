@@ -9,6 +9,8 @@ import img08 from "../assets/images/img08.avif";
 import img09 from "../assets/images/img15.avif";
 import img10 from "../assets/images/im10.avif";
 import img11 from "../assets/images/img11.avif";
+import img20 from "../assets/images/blocknft.avif"
+import img15 from "../assets/images/img15.avif"
 import azra from "../assets/images/Azra.webp"
 
 
@@ -154,18 +156,28 @@ export const Nfts:Nfts[]=[
     },
     {
         title:"",
-        imgUrl:azra,
+        imgUrl:img15,
         floor: 5.436
     },
     {
         title:"",
-        imgUrl:azra,
+        imgUrl:img03,
         floor: 5.436
     },
     {
         title:"",
+        imgUrl:img20,
+        floor: 5.436
+    }, 
+    {
+        title:"Azra Games - The Hopeful",
         imgUrl:azra,
         floor: 5.436
-    }
+    },
+    {
+        title:"Azra Games - The Hopeful",
+        imgUrl:img11,
+        floor: 5.436
+    },
 
 ];
