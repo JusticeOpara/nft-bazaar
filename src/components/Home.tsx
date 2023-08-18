@@ -1,6 +1,5 @@
 // import { Link } from "react-router-dom"
 import hero from "../assets/images/hero.jpg"
-import Container from "./Container"
 import metaMask from "../assets/metamask-icon.svg"
 import { BsFillRocketFill } from "react-icons/bs"
 import { LiaPenAltSolid } from "react-icons/lia"
@@ -16,17 +15,15 @@ import Footer from "./Footer"
 
 export default function Home() {
     return (
-        <Container>
-            <div className=" font-poppins text-white bg-[#212529]">
-                <div className="flex justify-between mt-[120px]   h-[80vh] ">
+        
+            <div className=" font-poppins text-white bg-[#212529] px-20">
+                <div className="flex justify-between mt-[120px] h-[80vh] items-center  ">
 
-                    <div className="w-[50%] flex flex-col gap-[40px] pt-4 ">
+                    <div className="w-[50%] flex flex-col gap-[40px] h-[357.14px]">
                         <div className="flex flex-col gap-2">
-                            <h2 className="text-[2.5rem] leading-[50px] font-bold font-poppins">
+                            <h2 className="text-[2rem] leading-[50px] font-bold font-poppins">
                                 Discover rare digital art and collect
                                 <span className="hero" > sell extraordinary</span> NFTs
-
-
                             </h2>
                             <p className="text-base font-normal">
                                 Creating and make money in the market place has become a popular way to montize digital creations. To get started,
@@ -35,7 +32,7 @@ export default function Home() {
                         </div>
 
 
-                        <div className="flex gap-5  ">
+                        <div className="flex gap-5">
                             <button className="flex items-center gap-2 bg-[#5142fc] text-white font-bold py-2.5 px-6 rounded-lg">
                                 <BsFillRocketFill />
                                 <a>Explore</a>
@@ -53,8 +50,8 @@ export default function Home() {
 
                     </div >
 
-                    <div className="w-[500px]">
-                        <img src={hero} alt="a picture of a bored ape NFT" className=" h-full w-full rounded-lg  " />
+                    <div className="w-[500px] h-[357.14px]">
+                        <img src={hero} alt="NFT" className=" h-full w-full rounded-lg" />
                     </div>
 
                 </div >
@@ -96,6 +93,6 @@ export default function Home() {
                 <Questions />
                 <Footer />
             </div>
-        </Container>
+    
     )
 }

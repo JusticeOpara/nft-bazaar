@@ -1,10 +1,9 @@
-import { BiSearch } from 'react-icons/bi';
+// import { BiSearch } from 'react-icons/bi';
 import { AiOutlineMenu } from "react-icons/ai";
 import { RiNftFill } from "react-icons/ri";
 import { RxAvatar } from "react-icons/rx";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiWallet } from "react-icons/bi"
-import Container from "./Container";
 import { Link } from "react-router-dom"
 
 
@@ -14,28 +13,31 @@ export default function Navbar() {
 
     return (
 
-        <div className=" py-4 border-b-[1px] bg-black fixed w-full top-0 left-0 z-[111111]">
+        <div className="max-w-[2520px] px-20 font-poppins py-4 border-b-[1px] fixed w-full bg-[#212529] top-0 left-0 z-[111111] ">
 
 
-            <Container>
+            <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 text-white">
 
-                <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 text-white">
-                    {/* <div className=''> */}
-                    <Link to="/" className='flex items-center'>
-                        <RiNftFill size={50} />
-                        <span className='font-extrabold text-xl hero'>NFT Bazaar</span>
-                    </Link>
+                <Link to="/" className='flex items-center'>
+                    <span className="hero bg-[linear-gradient(-45deg,#e250e5,#4b50e6,#e250e5,#4b50e6)]">
 
+                        <RiNftFill size={50} color="#4b50e6" />
+                    </span>
 
-                    {/* </div> */}
+                    <span className='font-extrabold text-xl hero'>NFT Bazaar</span>
+                </Link>
 
-                    <div className='flex gap-6 text-lg font-semibold items-center text-center '>
+                <div className='flex gap-10 text-base font-medium items-center text-center '>
 
-                        <p className='hover:text-[#e250e5]'><Link to="/collection">Collection </Link></p>
-                        <p className='hover:text-[#e250e5]'> <Link to="/stats">Stats </Link> </p>
-                    </div>
+                    <p className='hover:text-[#e250e5]'><Link to="/">Home </Link></p>
+                    <p className='hover:text-[#e250e5]'><Link to="/collection">Collection </Link></p>
+                    <p className='hover:text-[#e250e5]'> <Link to="/stats">Stats </Link> </p>
+                    <p className='hover:text-[#e250e5]'> <Link to="/create">Create </Link> </p>
+                    <p className='hover:text-[#e250e5]'> <Link to="/contact">Contact </Link> </p>
 
-                    <div className="border-[1px] w-full md:w-auto py-[5px] rounded-[16px] shadow-sm hover:shadow-md transition cursor-pointer">
+                </div>
+
+                {/* <div className="border-[1px] border-[#5142fc] w-full md:w-auto py-[5px] rounded-[16px] shadow-sm hover:shadow-md transition cursor-pointer">
 
                         <div className="flex flex-row items-center justify-between" >
                             <div className=" text-sm  font-semibold px-10">
@@ -53,43 +55,43 @@ export default function Navbar() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
-                    {/* <Search /> */}
-                    <div className="relative ">
-                        <div className="flex flex-row items-center gap-2">
+                {/* <Search /> */}
+                <div className="relative ">
+                    <div className="flex flex-row items-center gap-2">
 
-                            <div className='flex items-center py-[7px] px-[20px] border-[1px] border-[#5142fc] rounded-[50px]'>
+                        <div className='flex items-center py-[7px] px-[20px] border-[1px] border-[#5142fc] rounded-[50px]'>
 
-                                <BiWallet size={20} />
-                                <p className='text-sm font-medium flex'>
-                                    Connect Wallet
-                                </p>
+                            <BiWallet size={20} />
+                            <p className='text-sm font-medium flex'>
+                                Connect Wallet
+                            </p>
 
-                            </div>
-                            <div className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center  gap-3  rounded-full   cursor-pointer hover:shadow-md transition">
-                                <AiOutlineMenu />
-                                <div className="hidden md:block">
+                        </div>
+                        <div className="p-4 md:py-1 md:px-2 border-[1px] border-neutrval-200 border-[#5142fc] flex flex-row items-center  gap-3  rounded-full   cursor-pointer hover:shadow-md transition">
+                            <AiOutlineMenu />
+                            <div className="hidden md:block">
 
 
-                                    <RxAvatar size={30} className="rounded-full" />
+                                <RxAvatar size={30} className="rounded-full" />
 
-                                </div>
-                            </div>
-                            <div className='md:py-2 md:px-2 border-[1px] border-neutral-200 rounded-xl cursor-pointer hover:shadow-md transition'>
-                                <AiOutlineShoppingCart size={25} color={"gray"} />
                             </div>
                         </div>
+                        <div className='md:py-2 md:px-2 border-[1px] border-nyeutral-200 border-[#5142fc] rounded-xl cursor-pointer hover:shadow-md transition'>
+                            <AiOutlineShoppingCart size={25} color={"gray"} />
+                        </div>
                     </div>
-
-
-
                 </div>
 
 
-            </Container>
+
+            </div>
+
+
+
         </div>
 
 

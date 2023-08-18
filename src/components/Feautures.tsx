@@ -2,15 +2,15 @@ import React from "react"
 // import img1 from "../assets/images/img13.webp"
 // import img2 from "../assets/images/blink.webp"
 import img from "../assets/images/img05.avif"
-
+import showcase from "../assets/images/showcase-6.gif"
 const Feautures:React.FC = () => {
 
 
     return (
-        <div className="w-full  ">
-            <div className=" h-[100vh] w-full flex justify-evenly items-center">
+        <div className="w-full">
+            <div className=" h-[100vh] w-full flex justify-between items-center">
                 <div className="w-[40%] h-[80%] ">
-                    <img src={img} className="h-full w-full rounded-xl" alt="nft print" />
+                    <img src={showcase} className="h-full w-full rounded-xl" alt="nft print" />
                 </div>
 
                 <div className="w-[40%] h-[80%] gap-8 flex flex-col justify-center">
@@ -27,7 +27,7 @@ const Feautures:React.FC = () => {
 
             </div>
 
-            <div className=" h-[100vh] w-full flex justify-evenly  items-center">
+            <div className=" h-[100vh] w-full flex justify-between  items-center">
                
                 <div className="w-[40%] h-[80%] gap-8 flex flex-col justify-center">
                     <h1 className="text-2xl font-bold hero">Security Audit</h1>
