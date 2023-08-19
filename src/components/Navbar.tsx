@@ -13,7 +13,7 @@ export default function Navbar() {
 
     return (
 
-        <div className="max-w-[2520px] px-20 font-poppins py-4 border-b-[1px] fixed w-full bg-[#212529] top-0 left-0 z-[111111] ">
+        <div className="max-w-[2520px] px-20 font-poppins py-4 border-b-[1px] fixed w-full bg-inherit top-0 left-0 z-[111111] ">
 
 
             <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 text-white">
@@ -33,7 +33,7 @@ export default function Navbar() {
                     <p className='hover:text-[#e250e5]'><Link to="/collection">Collection </Link></p>
                     <p className='hover:text-[#e250e5]'> <Link to="/stats">Stats </Link> </p>
                     <p className='hover:text-[#e250e5]'> <Link to="/create">Create </Link> </p>
-                    <p className='hover:text-[#e250e5]'> <Link to="/contact">Contact </Link> </p>
+                    <p className='hover:text-[#e250e5]'> <Link to="/contact">Community</Link> </p>
 
                 </div>
 

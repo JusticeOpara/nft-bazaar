@@ -17,7 +17,7 @@ export default function Home() {
     return (
         
             <div className=" font-poppins text-white bg-[#212529] px-20">
-                <div className="flex justify-between mt-[120px] h-[80vh] items-center  ">
+                <div className="flex justify-between mt-[120px] h-[80vh] items-center">
 
                     <div className="w-[50%] flex flex-col gap-[40px] h-[357.14px]">
                         <div className="flex flex-col gap-2">

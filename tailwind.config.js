@@ -4,6 +4,10 @@ export default {
   theme: {
 
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('./assets/images/nft-background.jpg')",
+       
+      },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif']
       },

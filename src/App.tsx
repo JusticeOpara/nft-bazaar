@@ -31,7 +31,7 @@ const App = () => {
 
             <Route path="/collection" element={<Collection />} />
 
-            {/* <Route path="/create" element={<Create/>}/> */}
+             <Route path="/create" element={<Create/>}/> 
 
           </Routes>
 

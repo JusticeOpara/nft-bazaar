@@ -65,11 +65,11 @@ const Collection: React.FC = () => {
 								</div>
 								<div className=''>
 									<p className="text-sm font-normal">Higest Bid</p>
-									<p className="text-base font-semibold p-0 flex items-center "><FaEthereum size={15}/>{data.currentBid} ETH</p>
+									<p className="text-base font-semibold p-0 flex items-center "><FaEthereum size={15} />{data.currentBid} ETH</p>
 								</div>
 							</div>
 						</div>
-						
+
 
 						{hoveredStates[index] && (
 
