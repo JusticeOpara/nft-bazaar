@@ -1,104 +1,36 @@
-import Container from "./Container";
-import { RiNftFill } from "react-icons/ri";
+import React from "react"
+// import { RiNftFill } from "react-icons/ri";
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
-        <Container>
+        <div className="flex justify-between bg-blue-500 h-[50vh] items-center">
+            <div className="flex flex-col gap-5">
+                <h1 className="font-bold text-2xl" >NFT</h1>
+                <p className="text-base max-w-[300px] bg-blue-200">The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). </p>
+            </div>
+            <div className="">
+                <h1 className="text-base font-bold">Marketplace</h1>
+                <p>Collection</p>
+                <p>Roadmap</p>
+                <p>About</p>
+            </div>
+            <div className="">
+                <h1 className="text-base font-bold">Social Media</h1>
+                <p>Twitter</p>
+                <p>Linkedin</p>
+                <p>Telegram</p>
 
-
-            <div className="w-full h-[50vh] mb-10 text-white bg-slate-950">
-                <div >
-                    <div className="logo">
-                        <h2 className="d-flex gap-2 align-items-center ">
-                            <span>
-                                <RiNftFill />
-                            </span>
-                            NFTs
-                        </h2>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Voluptate, quod repellat! Quis quos dolorum tenetur fuga?
-                            Aspernatur rerum quae amet.
-                        </p>
-                    </div>
-                </div>
-
-                <div >
-                    <h5>My Account</h5>
-                    <div className="list__group">
-
-                        <div className="list__item">
-                            {/* <Link to={item.url}> {item.display} </Link> */}
-                        </div>
-
-                    </div>
-                </div>
-
-                <div>
-                    <h5>Resources</h5>
-                    <div className="list__group">
-
-                        <div className="list__item">
-                            {/* <Link to={item.url}> {item.display} </Link> */}
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-4">
-                    <h5>Company</h5>
-                    <div className="list__group">
-
-                        <div className="list__item">
-                            {/* <Link to={item.url}> {item.display} </Link> */}
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="mb-4">
-                    <h5>Newsletter</h5>
-                    <input type="text" className="newsletter" placeholder="Email" />
-                    <div className="social__links d-flex gap-3 align-items-center ">
-                        {/* <span>
-                        <Link to="#">
-                            <i className="ri-facebook-line"></i>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link to="#">
-                            <i className="ri-instagram-line"></i>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link to="#">
-                            <i className="ri-twitter-line"></i>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link to="#">
-                            <i className="ri-telegram-line"></i>
-                        </Link>
-                    </span>
-                    <span>
-                        <Link to="#">
-                            <i className="ri-discord-line"></i>
-                        </Link>
-                    </span> */}
-                    </div>
-                </div>
-
-                <div className=" mt-4 text-center">
-                    <p className="copyright">
-                        {" "}
-                        Copyrights 2022, Developed by JustScript.com
-                        All Rights Reserved.{" "}
-                    </p>
-                </div>
+            </div>
+            <div className="">
+                <h1 className="text-base font-bold">Resources</h1>
+                <p>Github</p>
+                <p>Blog</p>
+                <p>Help center</p>
             </div>
 
-        </Container>
-
+        </div>
+        // family: -apple-system,BlinkMacSystemFont,Segoe
+        //  UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
     );
 };

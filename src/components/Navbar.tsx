@@ -5,15 +5,49 @@ import { RxAvatar } from "react-icons/rx";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiWallet } from "react-icons/bi"
 import { Link } from "react-router-dom"
+import React, { useRef, useEffect } from "react";
 
 
+const Navbar: React.FC = () => {
+    
+    // const toggleMenu = () => menuRef.current.classList.toggle("active__menu");
+    const headerRef = useRef<HTMLDivElement>(null);
+    // const menuRef = useRef<HTMLDivElement>(null);
 
-export default function Navbar() {
+    useEffect(() => {
+        const handleScroll = () => {
+            if (
+                document.body.scrollTop > 80 ||
+                document.documentElement.scrollTop > 80
+            ) {
+                if (headerRef.current) {
+                    headerRef.current.classList.add('header-shrink');
+                }
+            } else {
+                if (headerRef.current) {
+                    headerRef.current.classList.remove('header-shrink');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    // const toggleMenu = () => {
+    //     if (menuRef.current) {
+    //         menuRef.current.classList.toggle('active__menu');
+    //     }
+    // };
+
 
 
     return (
 
-        <div className="max-w-[2520px] px-20 font-poppins py-4 border-b-[1px] fixed w-full bg-inherit top-0 left-0 z-[111111] ">
+        <div className="max-w-[2520px] px-20 font-poppins py-4 fixed w-full bg-inherit top-0 left-0 z-[111111]" ref={headerRef}>
 
 
             <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 text-white">
@@ -33,7 +67,7 @@ export default function Navbar() {
                     <p className='hover:text-[#e250e5]'><Link to="/collection">Collection </Link></p>
                     <p className='hover:text-[#e250e5]'> <Link to="/stats">Stats </Link> </p>
                     <p className='hover:text-[#e250e5]'> <Link to="/create">Create </Link> </p>
-                    <p className='hover:text-[#e250e5]'> <Link to="/contact">Community</Link> </p>
+                    <p className='hover:text-[#e250e5]'> <Link to="/community">Community</Link> </p>
 
                 </div>
 
@@ -98,3 +132,4 @@ export default function Navbar() {
     )
 
 }
+export default Navbar

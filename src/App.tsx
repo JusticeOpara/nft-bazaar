@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Stats from './components/Stats';
+import Community from './components/Community';
 import Collection from './components/Collection';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Create from './components/Create';
@@ -32,6 +33,8 @@ const App = () => {
             <Route path="/collection" element={<Collection />} />
 
              <Route path="/create" element={<Create/>}/> 
+
+             <Route path="/community" element={<Community/>}/>
 
           </Routes>
 

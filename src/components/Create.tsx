@@ -10,13 +10,13 @@ const Create: React.FC = () => {
   return (
     <div className="font-poppins text-white ">
 
-      {/* <div className="flex justify-center pt-[150px] h-[50vh] items-center bg-center  bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
-        <p className="text-4xl font-bold">Create Items</p>
-      </div> */}
+       <div className="flex justify-center prt-[150px] h-[50vh] items-center bg-center  bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
+        <p className="text-4xl font-bold">Create Your Own NFT</p>
+      </div> 
 
-      <div className="px-20 bg-gray-500 w-full h-[150vh] flex justify-between pt-[100px] ">
+      <div className="px-20 bg-[#212529] w-full h-[150vh] flex justify-between pt-[50px] ">
         <div className="flex flex-col gap-2">
-          <div className="bg-blue-200 rounded-lg w-[20rem] h-[25rem] flex justify-center items-center">
+          <div className="bg-gradient-to-r from-[#e250e5] to-[#4b50e6] rounded-lg w-[20rem] h-[25rem] flex justify-center items-center border">
 
             <div className="flex flex-col gap-4 items-center">
               <AiOutlineCloudUpload size={50} />
@@ -49,13 +49,13 @@ const Create: React.FC = () => {
 
 
 
-        <div className="w-[48rem] h-[40rem] p-6  rounded-lg border bg-red-300">
+        <div className="w-[48rem] h-[40rem] p-6  rounded-lg border ">
           <form className="gap-5 flex flex-col">
             <div className="">
               <label>Item Name</label>
               <input type="text"
                 placeholder="e.g Digital NFT item name"
-                className="w-full h-[40px] rounded-md bg-transparent pl-4 outline-none cursor-pointer border" />
+                className="w-full h-[40px] rounded-md bg-transparent pl-4 outline-none cursor-pointer border " />
             </div>
 
             <div className="">
@@ -113,20 +113,20 @@ const Create: React.FC = () => {
 
 
             <div className="flex justify-between gap-6">
-              <div className="flex flex-row items-center w-full h-[40px] bg-[#e250e5] border  rounded-md justify-center ">
+              <div className="flex flex-row items-center w-full h-[40px] bg-[#e250e5] border  rounded justify-center ">
                 <IoIosPricetags size={15} className="" />
-                <span>FIXED PRICE</span>
+                <span className="font-medium text-base">FIXED PRICE</span>
               </div>
-              <div className="flex w-full h-[40px] border rounded-md bg-transparent justify-center items-center">
-                <p>TIMED AUCTION</p>
+              <div className="flex w-full h-[40px] border rounded bg-transparent justify-center items-center">
+                <p className="font-medium text-base">TIMED AUCTION</p>
               </div>
-              <div className="flex items-center w-full h-[40px] rounded-md bg-transparent justify-center border">
-                <p>OPEN FOR BID</p>
+              <div className="flex items-center w-full h-[40px] rounded bg-transparent justify-center border">
+                <p className="font-medium text-base">OPEN FOR BID</p>
               </div>
             </div>
 
-            <div className="w-full h-[40px] bg-blue-500 rounded-md flex items-center justify-center">
-              <p>CREATE COLLLECTION</p>
+            <div className="w-full h-[40px] bg-[#4b50e6] rounded flex items-center justify-center">
+              <p className="font-semibold text-base ">CREATE COLLLECTION</p>
             </div>
 
           </form>
@@ -141,56 +141,3 @@ const Create: React.FC = () => {
 export default Create;
 
 
-
-{/* <form>
-<div className="w-full py-[7px] px-[25px] text-[#fff] border-outline-none">
-  <label htmlFor="">Upload File</label>
-  <input type="file" className="upload__input" />
-</div>
-
-<div className="form__input">
-  <label htmlFor="">Price</label>
-  <input
-    type="number"
-    placeholder="Enter price for one item (ETH)"
-  />
-</div>
-
-<div className="form__input">
-  <label htmlFor="">Minimum Bid</label>
-  <input type="number" placeholder="Enter minimum bid" />
-</div>
-
-<div className=" d-flex align-items-center gap-4">
-  <div className="form__input w-50">
-    <label htmlFor="">Starting Date</label>
-    <input type="date" />
-  </div>
-
-  <div className="form__input w-50">
-    <label htmlFor="">Expiration Date</label>
-    <input type="date" />
-  </div>
-</div>
-
-<div className="form__input">
-  <label htmlFor="">Title</label>
-  <input type="text" placeholder="Enter title" />
-</div>
-
-<div className="form__input">
-  <label htmlFor="">Description</label>
-  <textarea
-    name=""
-    id=""
-    rows="7"
-    placeholder="Enter description"
-    className="w-100"
-  ></textarea>
-</div>
-</form>
-
-
-
-
- */}
