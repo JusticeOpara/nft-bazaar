@@ -10,7 +10,7 @@ const Create: React.FC = () => {
   return (
     <div className="font-poppins text-white ">
 
-       <div className="flex justify-center prt-[150px] h-[50vh] items-center bg-center  bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
+       <div className="flex justify-center pt-[150px] h-[50vh] items-center bg-center  bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
         <p className="text-4xl font-bold">Create Your Own NFT</p>
       </div> 
 

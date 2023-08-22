@@ -4,7 +4,7 @@ const Sellers: React.FC = () => {
 
     return (
         <div>
-            {/* <section className="section sellers" aria-labelledby="sellers-label"> */}
+            
             <div className="container">
 
                 <h2 className="headline-md section-title text-center" id="sellers-label">Best Creators & Sellers</h2>

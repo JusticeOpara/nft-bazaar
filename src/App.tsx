@@ -6,7 +6,7 @@ import Community from './components/Community';
 import Collection from './components/Collection';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Create from './components/Create';
-
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -21,6 +21,7 @@ const App = () => {
           mrd:px-10
           srm:px-2
           prx-20
+          max-md:px-2
           font-poppins'> 
           <Navbar />
 
@@ -38,7 +39,7 @@ const App = () => {
 
           </Routes>
 
-
+          <Footer />
        </div> 
       
     </BrowserRouter>

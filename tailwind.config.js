@@ -9,6 +9,7 @@ export default {
        
       },
       fontFamily: {
+        // font-family: 'pp-telegraf-3', sans-serif;
         'poppins': ['Poppins', 'sans-serif']
       },
     },

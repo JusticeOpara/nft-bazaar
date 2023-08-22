@@ -17,9 +17,9 @@ const Collapsible: React.FC<CollapsibleProps> = ({ question, answer }) => {
     return (
         <div className={`w-full mb-10 btg-[#343444] flex flex-col justify-between cursor-pointer border-[1px] border-[#767676] rounded ${open ? 'mb-0' : 'mb-0'}`}>
     
-            <div className="flex flex-row justify-between px-3 py-3  items-center border-[#767676] rounded " style={{ color: !open ? '#000' : '#004DB3' }}>
+            <div className="flex flex-row justify-between px-3 py-3 items-center border-[#767676] rounded " style={{ color: !open ? '#000' : '#004DB3' }}>
 
-                <h4 className="text-xl text-white font-medium text-medium">{question}</h4>
+                <h4 className="text-xl max-md:text-base text-white font-medium text-medium">{question}</h4>
 
                 <button className="text-[25px] w-[30px] h-[25px] flex justify-center items-center rounded hero" onClick={toggle}   >
 
@@ -40,18 +40,17 @@ const Collapsible: React.FC<CollapsibleProps> = ({ question, answer }) => {
 }
 
 
-// Collection: React.FC
 const Questions:React.FC = () =>{
 
     return (
 
-        <div className="w-full bg-white h-[120vh] flex flex-col justify-evenly items-center">
+        <div className="w-full h-[120vh] flex flex-col justify-evenly items-center max-md:h-[100vh]">
 
 
             <h1 className="font-bold text-2xl text-center">Frequently Asked <span className="hero">Questions</span> </h1>
 
 
-            <div className="w-[1037px] flex flex-col gap-[5px]">
+            <div className="w-full flex flex-col gap-[5px]">
                 <Collapsible
                     question="What is an NFT ?"
                     answer="An NFT, or Non-Fungible Token, is a unique digital asset that represents ownership of a specific item, 
