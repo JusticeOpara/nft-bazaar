@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import axios from "axios";
-import Container from "./Container";
+import Container from "../components/Container";
 
 const Stats = () => {
 

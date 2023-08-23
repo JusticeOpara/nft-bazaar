@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Categories } from "../utils/data";
 import { FaEthereum } from "react-icons/fa"
 import { BsFilter, BsSearch } from "react-icons/bs"
+import {motion} from "framer-motion"
 
 
 console.log(Categories, "--Categories")
@@ -56,8 +57,13 @@ const Collection: React.FC = () => {
 
 
 	return (
-		<div className='font-poppins text-white'>
-			<div className="flex justify-center prt-[10px] h-[50vh] items-center bg-center  bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
+		<motion.div 
+		className='font-poppins text-white'
+		initial={{opacity:0}}
+		animate={{opacity:1}}
+		exit={{opacity:0}}>
+			
+			<div className="flex justify-center h-[50vh] items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
 				<p className="text-4xl font-bold text-white"> Collection</p>
 			</div>
 
@@ -85,15 +91,15 @@ const Collection: React.FC = () => {
 
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
-                       xl:grid-cols-4 2xl:grid-cols-6 gap-6 px-20 pb-20 mt-[50px]'>
+                       xl:grid-cols-4 2xl:grid-cols-6 gap-6 px-20 pb-20 mt-[50px] max-md:p-0 '>
 				{Categories?.map((data, index: number) => (
 					<div key={data.id}
-						className='col-span-1 cursor-pointer group bg-[#0f1729] text-white border-[1px] border-gray-500  p-[8px] shadow-md rounded-lg'
+						className='col-span-1 cursor-pointer group bg-[#0f1729] max-md:h-[60vh] text-white border-[1px] border-gray-500  p-[8px] shadow-md rounded-lg'
 						onMouseEnter={() => handleHover(index)}
 						onMouseLeave={() => handleMouseLeave(index)}>
 
 						<div className='flex flex-col items-center gap-1 w-full h-full bg-red-400o'>
-							<div className="relative w-[236.67px] h-[236.67px] overflow-hidden group rounded-lg">
+							<div className="relative w-[236.67px] h-[236.67px] overflow-hidden group rounded-lg max-md:w-full max-md:h-full">
 								<img src={data.imgUrl} className="w-full h-full object-cover transition-transform transform-gpu filter-grayscale group-hover:filter-none group-hover:scale-110" />
 							</div>
 
@@ -125,7 +131,7 @@ const Collection: React.FC = () => {
 
 							{hoveredStates[index] && (
 
-								<button className="bottom-0 w-full h-[40px] bg-[#5142fc] flex justify-center items-center rounded-lg ">
+								<button className="bottom-0 w-full h-[40px] max-md:h-[50px] bg-[#5142fc] flex justify-center items-center rounded-lg ">
 									Place a Bid
 								</button>
 
@@ -136,7 +142,7 @@ const Collection: React.FC = () => {
 				))}
 			</div>
 
-		</div>
+		</motion.div>
 
 
 

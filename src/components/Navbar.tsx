@@ -102,29 +102,29 @@ const Navbar: React.FC = () => {
                     </div>
 
                 </div>
-                <div onClick={handleNav} className='max-sm:block absolfute top-2 right-[20px] max-2xl:hidden w-10'>
+                <div onClick={handleNav} className='max-sm:block top-2 right-[20px] max-2xl:hidden w-10'>
                     {isNavExpanded ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={23} />}
                 </div>
-                <div className={isNavExpanded ? ' leading-loose  text-center text-xl absolute left-0 top-0 w-full mx-auto z-10 flex h-full mt-14 bg-primary ease-in-out flex-col bg-white' : 'absolute left-[-100%]'
+                <div className={isNavExpanded ? 'leading-loose h-max text-xl absolute left-0 top-0 w-full mx-auto z-10 flex mt-16 bg-primary ease-in-out flex-col' : 'bg-blue-800 absolute left-[-100%]'
                 }>
-                    <ul onClick={handleNav} className='w-full bg-[#343444] p-4 py-0.5 '>
+                    <ul onClick={handleNav} className='w-full bg-[#0f1729] p-inline-start-[40px]   '>
 
-                        <li className='hover:text-[#e250e5] w-fit mx-auto text-base font-medium '><Link to="/">Home </Link></li>
+                        <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px] '><Link to="/">Home </Link></li>
 
-                        <li className='hover:text-[#e250e5] w-fit mx-auto text-base font-medium '><Link to="/collection">Collection </Link></li>
+                        <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'><Link to="/collection">Collection </Link></li>
 
-                        <li className='hover:text-[#e250e5] w-fit mx-auto text-base font-medium '> <Link to="/stats">Stats </Link> </li>
+                        <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'> <Link to="/stats">Stats </Link> </li>
 
-                        <li className='hover:text-[#e250e5] w-fit mx-auto text-base font-medium '> <Link to="/create">Create </Link> </li>
+                        <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'> <Link to="/create">Create </Link> </li>
 
-                        <li className='hover:text-[#e250e5] w-fit mx-auto text-base font-medium '> <Link to="/community">Community</Link> </li>
+                        <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'> <Link to="/community">Community</Link> </li>
 
 
                     </ul>
                 </div>
 
             </div>
-
+           
 
 
         </div>

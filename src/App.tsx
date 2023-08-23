@@ -1,20 +1,15 @@
-
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Stats from './components/Stats';
-import Community from './components/Community';
-import Collection from './components/Collection';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Create from './components/Create';
-import Footer from './components/Footer';
+import { BrowserRouter } from 'react-router-dom';
 
+import Footer from './components/Footer';
+import AnimatedRoutes from './pages/AnimatedRoutes';
 
 const App = () => {
 
   return (
     <BrowserRouter>
-    
-         <div className='bdg-[#212529] 
+
+      <div className='bdg-[#212529] 
           mrax-w-[2520px]
           r-auto
           xrl:px-18
@@ -22,26 +17,13 @@ const App = () => {
           srm:px-2
           prx-20
           max-md:px-2
-          font-poppins'> 
-          <Navbar />
+          font-poppins'>
+        <Navbar />
+        <AnimatedRoutes />
 
-          <Routes>
+        <Footer />
+      </div>
 
-            <Route path="/" element={<Home />} />
-
-            <Route path='/stats' element={<Stats />} />
-
-            <Route path="/collection" element={<Collection />} />
-
-             <Route path="/create" element={<Create/>}/> 
-
-             <Route path="/community" element={<Community/>}/>
-
-          </Routes>
-
-          <Footer />
-       </div> 
-      
     </BrowserRouter>
 
   );

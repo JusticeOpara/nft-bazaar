@@ -19,7 +19,7 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-evenly mt-10 max-md:mt-0 w-full h-[100vh] max-md:h-[50vh] max-md:bg-gray-500">
+    <div className="flex flex-col justify-evenly mt-10 max-md:mt-0 w-full h-[100vh] max-md:h-[50vh] ">
 
       <div className="flex flex-col items-center text-center gap-1 w-full font-poppins">
         <h1 className="text-4xl font-bold hero">Own Your NFT</h1>

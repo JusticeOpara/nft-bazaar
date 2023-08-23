@@ -3,12 +3,13 @@ import React from "react"
 // import img2 from "../assets/images/blink.webp"
 import img from "../assets/images/img05.avif"
 import showcase from "../assets/images/showcase-6.gif"
+
 const Feautures:React.FC = () => {
 
 
     return (
         <div className="w-full">
-            <div className=" h-[100vh] w-full flex justify-between items-center max-md:h-[60vh] bg-gray-500">
+            <div className=" h-[100vh] w-full flex justify-between items-center max-md:h-[60vh]">
                 <div className="w-[40%] h-[80%] ">
                     <img src={showcase} className="h-full w-full rounded-xl" alt="nft print" />
                 </div>
@@ -42,7 +43,7 @@ const Feautures:React.FC = () => {
                      The audit scheme is characterized by its low cost and short time.
                      The goal of SlowMist is to make the blockchain ecosystem as secure as possible for everyone.
                     </p>
-                    <button className="flex  items-center w-[140px] bg-[#5142fc] hover:bg-blue-500 text-white font-bold py-2.5 px-6 rounded-lg">Read more</button>
+                    <button className="flex items-center w-[130px] max-md:text-sm bg-[#5142fc] hover:bg-blue-500 text-white font-bold py-2.5 justify-center rounded-lg">Read more</button>
                 </div>
 
                 <div className="w-[40%] max-md:w-[45%] h-[80%]">
