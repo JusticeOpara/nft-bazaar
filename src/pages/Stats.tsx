@@ -1,40 +1,25 @@
-import { useEffect } from "react";
-import axios from "axios";
-import Container from "../components/Container";
-
-const Stats = () => {
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const options = {
-                headers: {
-                    accept: 'application/json',
-                    'X-API-KEY': 'ca66968a9b6740e081bb3b8b050b2bf6',
-                },
-            };
-
-            try {
-                const response = await axios.get('https://api.opensea.io/v2/chain/bsc/account/0x5ff83cde915331b6ae6ae3b966b26b9de3614584/nfts?limit=50', options);
-                console.log(response.data);
-                // const response = await axios.get('https://api.opensea.io/v2/listings/collection/cool-cats-nft/all?limit=50', options);
 
 
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        fetchData();
-    }, []);
+import React from 'react'
+import {motion} from "framer-motion"
 
 
+const Stats: React.FC = () => {
     return (
-        <Container>
-            <div className="bg-gray-500 w-[100%] h-[100%]">
+        <motion.div 
+        className="font-poppins text-white"
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}>
 
+            <div className="flex justify-center pt-[150px] h-[50vh] items-center bg-center  bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
+                <p className="text-4xl font-bold"> stats</p>
             </div>
-        </Container>
+            <div className="px-20 bg-[#212529] w-full h-[150vh] flex justify-between pt-[50px] ">
+                <div className="flex flex-col gap-2"></div>
+            </div>
 
+        </motion.div>
     )
 }
 export default Stats

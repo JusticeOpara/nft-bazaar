@@ -3,30 +3,27 @@ import React from "react"
 // import img2 from "../assets/images/blink.webp"
 import img from "../assets/images/img05.avif"
 import showcase from "../assets/images/showcase-6.gif"
-// import { motion, useScroll, useTransform } from "framer-motion"
-
+ import { motion, useScroll, useTransform } from "framer-motion"
+import {useRef} from "react"
 const Feautures: React.FC = () => {
-    // const ref = useRef<HTMLDivElement>(null)
-    // const { scrollYProgress } = useScroll({
-    //     target: ref,
-    //     offset: ["0 1", "1.33 1"]
-    // })
-    // const yRange = [0, 1]
-    // const vRange = [0.6, 1]
-    // const xRange = [0, 1]
-    // const opacityRange = [0.8, 1]
-    // const scaleProgess = useTransform(scrollYProgress, xRange, opacityRange)
-    // const opacityProgess = useTransform(scrollYProgress, yRange, vRange)
+    const ref = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1.33 1"]
+    })
+    const yRange = [0, 1]
+    const vRange = [0.6, 1]
+    const xRange = [0, 1]
+    const opacityRange = [0.8, 1]
+    const scaleProgess = useTransform(scrollYProgress, xRange, opacityRange)
+    const opacityProgess = useTransform(scrollYProgress, yRange, vRange)
 
     return (
-        // <motion.div ref={ref}
-        //     style={{
-        //         scale: scaleProgess,
-        //         opacity: opacityProgess
-        //     }}
-        <div
+        <motion.div ref={ref}
+            style={{scale: scaleProgess,opacity: opacityProgess}}
+        
             className="w-full ">
-            <div className="sm:bg-red-500 h-[100vh] w-full flex justify-between items-center max-md:h-[60vh]">
+            <div className="h-[100vh] w-full flex justify-between items-center max-md:h-[60vh]">
                 <div className="w-[40%] h-[80%] ">
                     <img src={showcase} className="h-full w-full rounded-xl" alt="nft print" />
                 </div>
@@ -71,7 +68,7 @@ const Feautures: React.FC = () => {
             </div>
 
 
-        </div>
+        </motion.div>
     )
 }
 

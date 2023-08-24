@@ -11,7 +11,9 @@ export default function Hover3D({
   y = 0,
   z = 0
 }: Hover3DProps): CSSProperties {
+
   const ref = useRef<HTMLDivElement>(null);
+  
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 

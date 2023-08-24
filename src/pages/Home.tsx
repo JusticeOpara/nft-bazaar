@@ -13,19 +13,23 @@ import Carousel from "../components/Carousel"
 import Feautures from "../components/Feautures"
 import Questions from "../components/Questions"
 import { motion } from 'framer-motion';
-import {useRef} from "react"
-import Hover3d from '../utils/mouse';
+// import {useRef} from "react"
+// import Hover3d,{ Hover3DProps }from '../utils/mouse';
+import Hover3d from '../utils/mouse'; // Assuming Hover3DProps interface is exported from "mouse" file
 
 
 const smallScreenStyles = {
     fontSize: '4%',
   }
 export default function Home() {
-    const heroRef = useRef<HTMLDivElement>(null);
+    // const heroRef = useRef<HTMLDivElement>(null);
 
-    
-    const hoverHero = Hover3d(heroRef, { x: 30, y: -40, z: 30 });
-    const imageHover = Hover3d(heroRef, { x: 20, y: -5, z: 11 });
+    const hoverHero = Hover3d({ x: 30, y: -40, z: 30 });
+    const imageHover = Hover3d({ x: 20, y: -5, z: 11 });
+  
+  
+    // const hoverHero = Hover3d(heroRef, { x: 30, y: -40, z: 30 });
+    //  const imageHover = Hover3d(heroRef, { x: 20, y: -5, z: 11 });
     return (
 
         <motion.div 
@@ -68,9 +72,9 @@ export default function Home() {
 
                 </div >
 
-                <div className="w-[500px] h-[357.14px] max-md:hidden" style={{ transform: hoverHero.transform,}}>
+                <div className="w-[500px] h-[357.14px] max-md:hidden" style={ hoverHero}>
                     <img src={rainbow}
-                                  style={{transform: imageHover.transform,}}
+                                  style={imageHover}
                      alt="NFT" className=" h-full w-full rounded-lg filter rendering-crisp-edges" />
                 </div>
 

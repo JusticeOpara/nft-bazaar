@@ -43,7 +43,7 @@ const Collapsible: React.FC<FaqItem & { isOpen: boolean; onClick: () => void }> 
 }) => {
     return (
         <div
-            className={`w-full mb-5 max-md:mb-2 bg-[#343444] flex flex-col justify-between cursor-pointer border-[1px] border-[#767676] rounded ${isOpen ? "mb-0" : "mb-0"
+            className={`w-full mb-5 max-md:mb-2 bg-[-[#212529] flex flex-col justify-between cursor-pointer border-[1px] border-[#767676] rounded ${isOpen ? "mb-0" : "mb-0"
                 }`}
         >
             <div
