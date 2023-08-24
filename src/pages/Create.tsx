@@ -10,7 +10,7 @@ const Create: React.FC = () => {
 
   return (
     <motion.div
-      className="font-poppins text-white max-sm:bg-red-600"
+      className="font-poppins text-white max-sm:bg-red-600 mb-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -20,14 +20,14 @@ const Create: React.FC = () => {
         <p className="text-4xl font-bold">Create Your Own NFT</p>
       </div>
 
-      <div className="px-20 max-md:px-0 bg-[#212529] w-full h-[150vh] max-sm:h-[200vh] max-sm:justify-evenly flex justify-between  pt-[50px] max-md:flex-col">
-        <div className="flex flex-col gap-2 max-gmd:bg-gray-500 max-md:w-full">
+      <div className="px-20 max-md:px-0 bg-[#212529] w-full h-[150vh] max-sm:h-[235vh] max-sm:justify-evenly flex justify-between max-sm:bg-blue-400 pt-[50px] max-md:pt-0 max-md:flex-col">
+        <div className="flex flex-col gap-2 max-gmd:bg-gray-500 max-md:w-full max-md:items-center">
           <div className="bg-gradient-to-r from-[#e250e5] to-[#4b50e6] rounded-lg w-[20rem] h-[25rem] flex justify-center items-center border">
 
             <div className="flex flex-col gap-4 items-center">
               <AiOutlineCloudUpload size={50} />
 
-              <div className="flex justify-center flex-col ">
+              <div className="flex justify-center flex-col">
                 <p className="text-base font-normal">SVG,PNG,JPG,WEBP</p>
                 <p className="text-base font-normal">MP4,AVI,WMV,MPEG</p>
                 <p className="text-base font-normal te">MP3,WAV,AAC,WAV</p>
@@ -41,7 +41,7 @@ const Create: React.FC = () => {
 
           </div>
 
-          <div className="flex gap-2 flex-col">
+          <div className="flex gap-2 flex-col max-md:items-start max-md:pl-20 max-md:w-full">
             <p>Note:</p>
             <p>Service charge: 2%</p>
             <p>Today conversion rate:</p>

@@ -14,36 +14,28 @@ import Feautures from "../components/Feautures"
 import Questions from "../components/Questions"
 import { motion } from 'framer-motion';
 import {useRef} from "react"
-import Hover3d from "../utils/hover"
+import Hover3d from '../utils/mouse';
+
 
 const smallScreenStyles = {
     fontSize: '4%',
   }
 export default function Home() {
-    const hero = useRef<HTMLDivElement>(null);
+    const heroRef = useRef<HTMLDivElement>(null);
 
-    const hoverHero = Hover3d(hero, {
-      x: 30,
-      y: -40,
-      z: 30,
-    });
-  
-    const imageHover = Hover3d(hero, {
-      x: 20,
-      y: -5,
-      z: 11,
-    });
-   
+    
+    const hoverHero = Hover3d(heroRef, { x: 30, y: -40, z: 30 });
+    const imageHover = Hover3d(heroRef, { x: 20, y: -5, z: 11 });
     return (
 
         <motion.div 
-        className=" font-poppins text-white bg-[#212529] px-20  max-md:w-full max-md:px-0"
+        className=" font-poppins text-white  bg-[#212529] px-20  max-md:w-full max-md:px-0"
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity:0}}
         >
             
-            <div className="flex justify-between mt-[120px] max-md:mt-[100px] h-[80vh] items-center max-md:w-full max-md:h-[50vh] max-md:justify-center">
+            <div className="flex justify-between mt-[120px] max-md:mt-[80px] max-sm:mt-[80px] h-[80vh] items-center max-md:w-full max-md:h-[50vh] max-md:justify-center">
 
                 <div className="w-[50%] flex flex-col gap-[40px] h-[357.14px] max-md:w-full max-md:items-center max-md:justify-center max-md:h-full">
                     <div className="flex flex-col gap-2 max-md:text-center">
@@ -76,9 +68,9 @@ export default function Home() {
 
                 </div >
 
-                <div className="w-[500px] h-[357.14px] max-md:hidden" style={{transform: hoverHero.transform,}}>
+                <div className="w-[500px] h-[357.14px] max-md:hidden" style={{ transform: hoverHero.transform,}}>
                     <img src={rainbow}
-                    style={{transform: imageHover.transform }}
+                                  style={{transform: imageHover.transform,}}
                      alt="NFT" className=" h-full w-full rounded-lg filter rendering-crisp-edges" />
                 </div>
 
