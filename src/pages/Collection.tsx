@@ -4,22 +4,54 @@ import { FaEthereum } from "react-icons/fa"
 import { BsFilter, BsSearch } from "react-icons/bs"
 import { motion } from "framer-motion"
 
-
+interface Category {
+	id: string;
+	title: string;
+	imgUrl: string;
+	price: number;
+	creatorImg: string;
+	currentBid: number;
+}
 console.log(Categories, "--Categories")
 
 const Collection: React.FC = () => {
-	const [data, setData] = useState(Categories);
+	const [data, setData] = useState<Category[]>([]);
 	console.log(data, "--data to handle sort")
 	const [hoveredStates, setHoveredStates] = useState<boolean[]>(Array(Categories.length).fill(false));
-	const [favorite, setFavorite] = useState(false)
+	const [favorite, setFavorite] = useState<{ [id: number]: boolean }>({})
 
 
-	const handleFavourited = () => {
-		setFavorite(true);
+	const handleSort = (e: React.ChangeEvent<HTMLSelectElement>) => {
+		const filterValue = e.target.value;
+
+		switch (filterValue) {
+
+			case 'high':
+				setData(Categories.filter(item => item.currentBid >= 6));
+				break;
+			case 'mid':
+				setData(Categories.filter(item => item.currentBid >= 5.5 && item.currentBid < 6));
+				break;
+			case 'low':
+				setData(Categories.filter(item => item.currentBid >= 4.89 && item.currentBid < 5.5));
+				break;
+
+			default:
+				setData(Categories);
+				console.log(Categories,"--default")
+				break;
+		}
+		console.log(filterValue, "-filteredValue")
 	};
 
-	const handleUnfavourite = () => {
-		setFavorite(false);
+
+
+	const handleFavourited = (index: number) => {
+		setFavorite((prevFavorites) => ({ ...prevFavorites, [index]: true }));
+	};
+
+	const handleUnfavourite = (index: number) => {
+		setFavorite((prevFavorites) => ({ ...prevFavorites, [index]: false }));
 	};
 
 	const handleHover = (index: number) => {
@@ -42,28 +74,6 @@ const Collection: React.FC = () => {
 	};
 	console.log(hoveredStates, "--hoverStates")
 
-	const handleSort = (e: React.ChangeEvent<HTMLSelectElement>) => {
-		const filterValue = e.target.value;
-
-		if (filterValue === 'high') {
-			const filterData = Categories.filter((item) => item.currentBid >= 6);
-			setData(filterData);
-		}
-
-		if (filterValue === 'mid') {
-			const filterData = Categories.filter(
-				(item) => item.currentBid >= 5.5 && item.currentBid < 6
-			);
-			setData(filterData);
-		}
-
-		if (filterValue === 'low') {
-			const filterData = Categories.filter(
-				(item) => item.currentBid >= 4.89 && item.currentBid < 5.5
-			);
-			setData(filterData);
-		}
-	};
 
 
 	return (
@@ -91,7 +101,8 @@ const Collection: React.FC = () => {
 
 				<div className="bg-red-400">
 					<select className='bg-red-400' onChange={handleSort}>
-						<option>Sort By</option>
+						<option>sfs</option>
+						<option value="default">Default</option>
 						<option value="high">High Rate</option>
 						<option value="mid">Mid Rate</option>
 						<option value="low">Low Rate</option>
@@ -102,9 +113,9 @@ const Collection: React.FC = () => {
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
                        xl:grid-cols-4 2xl:grid-cols-6 gap-6 px-20 pb-20 mt-[50px] max-md:p-0 '>
-				{Categories?.map((data, index: number) => (
+				{data?.map((data, index: number) => (
 					<div key={data.id}
-						className='col-span-1 cursor-pointer group bg-[#0f1729] max-md:h-[60vh] text-white border-[1px] border-gray-500  p-[8px] shadow-md rounded-lg'
+						className='col-span-1 cursor-pointer group bg-[#0f1729] max-md:h-[60vh] text-white border-[1px] border-gray-500  p-[8px] shadow-2xl rounded-lg'
 						onMouseEnter={() => handleHover(index)}
 						onMouseLeave={() => handleMouseLeave(index)}>
 
@@ -113,24 +124,22 @@ const Collection: React.FC = () => {
 							<div className="relative w-[236.67px] h-[236.67px] overflow-hidden group rounded-lg max-md:w-full max-md:h-full bg-white">
 								<img src={data.imgUrl} className="z-0 relative w-full h-full object-cover transition-transform transform-gpu filter-grayscale group-hover:filter-none group-hover:scale-110" />
 
-								
+
 								<div className="absolute top-[8px] right-[8px]">
-									{favorite ? (
-										<svg onClick={handleUnfavourite} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+									{favorite[index] ? (
+										<svg onClick={() => handleUnfavourite(index)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
 											focusable="false" className="chakra-icon css-13otjrl" aria-hidden="true">
 											<path d="M4.999 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424l-7.234-4.537-7.234 4.536a.5.5 0 0 
                                       1-.766-.423V3a1 1 0 0 1 1-1Z" fill="currentColor"></path>
 										</svg>
 
-
-
 									) : (
-										<svg onClick={handleFavourited} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-										focusable="false" className="chakra-icon css-13otjrl" aria-hidden="true">
-										<path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.767.424L12 
+										<svg onClick={() => handleFavourited(index)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+											focusable="false" className="chakra-icon css-13otjrl" aria-hidden="true">
+											<path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.767.424L12 
 							18.03l-7.234 4.536a.5.5 0 0 1-.766-.423V3a1 1 0 0 1 1-1Zm13 2H6v15.432l6-3.761 6 3.761V4Z"
-											fill="currentColor"></path>
-									</svg>
+												fill="currentColor"></path>
+										</svg>
 
 									)}
 

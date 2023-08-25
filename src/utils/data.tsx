@@ -100,7 +100,7 @@ export const Categories: Category[] = [
         imgUrl: img06,
         price: 55.896,
         creatorImg: ava06,
-        currentBid: 4.99,
+        currentBid: 4.89,
     },
 
     {

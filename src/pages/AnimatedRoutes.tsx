@@ -1,7 +1,6 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Home';
-import Stats from './Stats';
 import Community from './Community';
 import Collection from './Collection';
 import Create from './Create';
@@ -20,7 +19,7 @@ const AnimatedRoutes: React.FC = () => {
 
                 <Route path="/" element={<Home />} />
 
-                <Route path='/stats' element={<Stats />} />
+                
 
                 <Route path="/collection" element={<Collection />} />
 

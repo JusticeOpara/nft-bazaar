@@ -10,9 +10,9 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 const Navbar: React.FC = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
-    // const toggleMenu = () => menuRef.current.classList.toggle("active__menu");
+  
     const headerRef = useRef<HTMLDivElement>(null);
-    // const menuRef = useRef<HTMLDivElement>(null);
+  
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,11 +37,6 @@ const Navbar: React.FC = () => {
         };
     }, []);
 
-    // const toggleMenu = () => {
-    //     if (menuRef.current) {
-    //         menuRef.current.classList.toggle('active__menu');
-    //     }
-    // };
     const handleNav = () => {
         setIsNavExpanded(!isNavExpanded)
     }

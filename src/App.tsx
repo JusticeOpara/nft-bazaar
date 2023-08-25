@@ -9,13 +9,8 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      <div className='bdg-[#212529] 
-          mrax-w-[2520px]
-          r-auto
-          xrl:px-18
-          mrd:px-10
-          srm:px-2
-          prx-20
+      <div className='brg-[#212529]  
+          
           max-md:px-2
           font-poppins'>
         <Navbar />
