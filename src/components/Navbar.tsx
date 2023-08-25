@@ -69,7 +69,6 @@ const Navbar: React.FC = () => {
 
                     <p className='hover:text-[#e250e5]'><Link to="/">Home </Link></p>
                     <p className='hover:text-[#e250e5]'><Link to="/collection">Collection </Link></p>
-                    <p className='hover:text-[#e250e5]'> <Link to="/stats">Stats </Link> </p>
                     <p className='hover:text-[#e250e5]'> <Link to="/create">Create </Link> </p>
                     <p className='hover:text-[#e250e5]'> <Link to="/community">Community</Link> </p>
 
@@ -112,8 +111,6 @@ const Navbar: React.FC = () => {
                         <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px] '><Link to="/">Home </Link></li>
 
                         <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'><Link to="/collection">Collection </Link></li>
-
-                        <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'> <Link to="/stats">Stats </Link> </li>
 
                         <li className='hover:text-[#e250e5] w-fit text-base font-medium py-[12px] px-[13px]'> <Link to="/create">Create </Link> </li>
 

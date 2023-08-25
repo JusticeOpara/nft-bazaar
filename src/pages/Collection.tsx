@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Categories } from "../utils/data";
 import { FaEthereum } from "react-icons/fa"
 import { BsFilter, BsSearch } from "react-icons/bs"
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 
 console.log(Categories, "--Categories")
@@ -11,6 +11,16 @@ const Collection: React.FC = () => {
 	const [data, setData] = useState(Categories);
 	console.log(data, "--data to handle sort")
 	const [hoveredStates, setHoveredStates] = useState<boolean[]>(Array(Categories.length).fill(false));
+	const [favorite, setFavorite] = useState(false)
+
+
+	const handleFavourited = () => {
+		setFavorite(true);
+	};
+
+	const handleUnfavourite = () => {
+		setFavorite(false);
+	};
 
 	const handleHover = (index: number) => {
 		setHoveredStates((prevStates) => {
@@ -57,12 +67,12 @@ const Collection: React.FC = () => {
 
 
 	return (
-		<motion.div 
-		className='font-poppins text-white'
-		initial={{opacity:0}}
-		animate={{opacity:1}}
-		exit={{opacity:0}}>
-			
+		<motion.div
+			className='font-poppins text-white'
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}>
+
 			<div className="flex justify-center h-[50vh] items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
 				<p className="text-4xl font-bold text-white"> Collection</p>
 			</div>
@@ -98,10 +108,36 @@ const Collection: React.FC = () => {
 						onMouseEnter={() => handleHover(index)}
 						onMouseLeave={() => handleMouseLeave(index)}>
 
-						<div className='flex flex-col items-center gap-1 w-full h-full bg-red-400o'>
-							<div className="relative w-[236.67px] h-[236.67px] overflow-hidden group rounded-lg max-md:w-full max-md:h-full">
-								<img src={data.imgUrl} className="w-full h-full object-cover transition-transform transform-gpu filter-grayscale group-hover:filter-none group-hover:scale-110" />
+						<div className='flex flex-col items-center gap-1 w-full h-full'>
+
+							<div className="relative w-[236.67px] h-[236.67px] overflow-hidden group rounded-lg max-md:w-full max-md:h-full bg-white">
+								<img src={data.imgUrl} className="z-0 relative w-full h-full object-cover transition-transform transform-gpu filter-grayscale group-hover:filter-none group-hover:scale-110" />
+
+								
+								<div className="absolute top-[8px] right-[8px]">
+									{favorite ? (
+										<svg onClick={handleUnfavourite} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+											focusable="false" className="chakra-icon css-13otjrl" aria-hidden="true">
+											<path d="M4.999 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424l-7.234-4.537-7.234 4.536a.5.5 0 0 
+                                      1-.766-.423V3a1 1 0 0 1 1-1Z" fill="currentColor"></path>
+										</svg>
+
+
+
+									) : (
+										<svg onClick={handleFavourited} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+										focusable="false" className="chakra-icon css-13otjrl" aria-hidden="true">
+										<path d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.767.424L12 
+							18.03l-7.234 4.536a.5.5 0 0 1-.766-.423V3a1 1 0 0 1 1-1Zm13 2H6v15.432l6-3.761 6 3.761V4Z"
+											fill="currentColor"></path>
+									</svg>
+
+									)}
+
+								</div>
 							</div>
+
+
 
 							<div className="w-full">
 								<div className="w-[32px] flex flex-row items-center gap-2 flex-start ">
@@ -144,10 +180,7 @@ const Collection: React.FC = () => {
 
 		</motion.div>
 
-
-
 	);
 };
 
 export default Collection;
-
