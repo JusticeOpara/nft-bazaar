@@ -12,6 +12,7 @@ import img11 from "../assets/images/img11.avif";
 import img12 from "../assets/images/img12.avif";
 import img13 from "../assets/images/img13.webp";
 import img20 from "../assets/images/blocknft.avif"
+import img14 from "../assets/images/img14.webp"
 import img16 from "../assets/boredApe.png"
 import azra from "../assets/images/Azra.webp"
 
@@ -179,6 +180,15 @@ export const Categories: Category[] = [
         creatorImg: ava10,
         currentBid: 4.89,
     },
+    {
+        id: "08",
+        title: "Guard",
+        imgUrl: img14,
+        price: 55.896,
+        creatorImg: ava04,
+        currentBid: 5.89,
+    },
+
 
 
 ];

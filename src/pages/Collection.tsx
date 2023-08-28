@@ -83,7 +83,7 @@ const Collection: React.FC = () => {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}>
 
-			<div className="flex justify-center h-[50vh] items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
+			<div className="flex justify-center pt-[150px] h-[50vh] items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
 				<p className="text-4xl font-bold text-white"> Collection</p>
 			</div>
 
@@ -96,24 +96,22 @@ const Collection: React.FC = () => {
 					<BsSearch size={20} color={"white"} />
 					<input type="text"
 						placeholder='Search by the name of trait'
-						className='w-full bg-inherit h-[2rem] focus:border-0 focus:outline-none placeholder-white text-black border-[#D1D5DB]' />
+						className='w-full bg-inherit h-[2rem] focus:border-0 focus:outline-none placeholder-white text-white border-[#D1D5DB]' />
 				</div>
 
-				<div className="bg-red-400">
-					<select className='bg-red-400' onChange={handleSort}>
-						<option>sfs</option>
-						<option value="default">Default</option>
+					<select className='text-base cursor-pointer bg-inherit border h-[45px] rounded-xl focus:outline-none px-2 text-white border-[#D1D5DB] flex justify-center items-center' onChange={handleSort}>
+						<option className='' value="default">Default</option>
 						<option value="high">High Rate</option>
 						<option value="mid">Mid Rate</option>
 						<option value="low">Low Rate</option>
 					</select>
-				</div>
+				
 			</div>
 
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
                        xl:grid-cols-4 2xl:grid-cols-6 gap-6 px-20 pb-20 mt-[50px] max-md:p-0 '>
-				{data?.map((data, index: number) => (
+				{Categories?.map((data, index: number) => (
 					<div key={data.id}
 						className='col-span-1 cursor-pointer group bg-[#0f1729] max-md:h-[60vh] text-white border-[1px] border-gray-500  p-[8px] shadow-2xl rounded-lg'
 						onMouseEnter={() => handleHover(index)}
@@ -161,7 +159,7 @@ const Collection: React.FC = () => {
 									</div>
 								</div>
 
-								<div className="flex flex-row  w-full justify-between p-[8px] rounded-[8px]   bg-slate-500">
+								<div className="flex flex-row  w-full justify-between p-[8px] rounded-[8px] bg-slate-500">
 									<div className=''>
 										<p className="text-sm font-normal ">Price</p>
 										<p className="text-base font-semibold">{data.price}</p>
