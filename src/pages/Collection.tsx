@@ -3,6 +3,8 @@ import { Categories } from "../utils/data";
 import { FaEthereum } from "react-icons/fa"
 import { BsFilter, BsSearch } from "react-icons/bs"
 import { motion } from "framer-motion"
+import Modal from '../components/Modal';
+
 
 interface Category {
 	id: string;
@@ -15,10 +17,16 @@ interface Category {
 console.log(Categories, "--Categories")
 
 const Collection: React.FC = () => {
+
 	const [data, setData] = useState<Category[]>([]);
 	console.log(data, "--data to handle sort")
 	const [hoveredStates, setHoveredStates] = useState<boolean[]>(Array(Categories.length).fill(false));
 	const [favorite, setFavorite] = useState<{ [id: number]: boolean }>({})
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleToggleModal = () => {
+		setIsModalOpen(!isModalOpen);
+	};
 
 
 	const handleSort = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -38,7 +46,7 @@ const Collection: React.FC = () => {
 
 			default:
 				setData(Categories);
-				console.log(Categories,"--default")
+				console.log(Categories, "--default")
 				break;
 		}
 		console.log(filterValue, "-filteredValue")
@@ -75,7 +83,6 @@ const Collection: React.FC = () => {
 	console.log(hoveredStates, "--hoverStates")
 
 
-
 	return (
 		<motion.div
 			className='font-poppins text-white'
@@ -87,7 +94,7 @@ const Collection: React.FC = () => {
 				<p className="text-4xl font-bold text-white"> Collection</p>
 			</div>
 
-			<div className="w-full bg-slate-500 flex items-center justify-between px-20 gap-6">
+			<div className="w-full pt-2 flex items-center justify-between px-20 gap-6">
 				<div className='bg-gray-300 rounded-xl'>
 					<BsFilter size={40} />
 				</div>
@@ -99,18 +106,18 @@ const Collection: React.FC = () => {
 						className='w-full bg-inherit h-[2rem] focus:border-0 focus:outline-none placeholder-white text-white border-[#D1D5DB]' />
 				</div>
 
-					<select className='text-base cursor-pointer bg-inherit border h-[45px] rounded-xl focus:outline-none px-2 text-white border-[#D1D5DB] flex justify-center items-center' onChange={handleSort}>
-						<option className='' value="default">Default</option>
-						<option value="high">High Rate</option>
-						<option value="mid">Mid Rate</option>
-						<option value="low">Low Rate</option>
-					</select>
-				
+				<select className='text-base cursor-pointer bg-[#0f1729] border h-[45px] rounded-xl focus:outline-none px-2 text-white border-[#D1D5DB] flex justify-center items-center' onChange={handleSort}>
+					<option className='' value="default">Default</option>
+					<option value="high">High Rate</option>
+					<option value="mid">Mid Rate</option>
+					<option value="low">Low Rate</option>
+				</select>
+
 			</div>
 
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
-                       xl:grid-cols-4 2xl:grid-cols-6 gap-6 px-20 pb-20 mt-[50px] max-md:p-0 '>
+                       xl:grid-cols-4 2xl:grid-cols-6 gap-6 px-20 pb-20 mt-[40px] max-md:p-0 '>
 				{Categories?.map((data, index: number) => (
 					<div key={data.id}
 						className='col-span-1 cursor-pointer group bg-[#0f1729] max-md:h-[60vh] text-white border-[1px] border-gray-500  p-[8px] shadow-2xl rounded-lg'
@@ -174,11 +181,47 @@ const Collection: React.FC = () => {
 
 							{hoveredStates[index] && (
 
-								<button className="bottom-0 w-full h-[40px] max-md:h-[50px] bg-[#5142fc] flex justify-center items-center rounded-lg ">
-									Place a Bid
+								<button
+									onClick={handleToggleModal}
+									className="bottom-0 w-full h-[40px] max-md:h-[50px] bg-[#5142fc] flex justify-center items-center rounded-lg">
+									{isModalOpen ? 'Close Modal' : 'Place Bid'}
 								</button>
-
 							)}
+
+							<Modal isOpen={isModalOpen} onClose={handleToggleModal}>
+								<h1 className="text-sm text-center font-semibold pb-2">You are about to place a bit for The Red Bored Ape</h1>
+								<div className='flex flex-col gap-4'>
+
+									<div className='w-full h-[40%]  '>
+										<img src={data.imgUrl} className='w-full h-full rounded' />
+									</div>
+
+									<input placeholder='Enter your bid'
+										className='w-full bg-inherit h-[35px] pl-3 focus:outline-none placeholder-white text-white text-sm border-[1px] rounded-xl' />
+
+									<div className='flex flex-col gap-2'>
+										<div className='flex justify-between items-center'>
+											<p className='text-base font-medium text-white'>Avaliable Balance</p>
+											<span className='font-semibold'>322.53 ETH </span>
+										</div>
+										<div className='flex justify-between items-center'>
+											<p className='text-base font-medium text-white'>Service Fee</p>
+											<span className='font-semibold'>0.55 ETH</span>
+										</div>
+										<div className='flex justify-between items-center'>
+											<p className='text-base font-medium text-white'>Total bid amount</p>
+											<span className='font-semibold'>00.000 ETH</span>
+										</div>
+									</div>
+
+									<button
+										onClick={handleToggleModal}
+										className="bottom-0 w-full h-[40px] max-md:h-[50px] bg-[#5142fc] flex justify-center items-center rounded-lg">
+										{isModalOpen ? 'Place Bid....' : 'Place Bid'}
+									</button>
+								</div>
+
+							</Modal>
 
 						</div>
 					</div>

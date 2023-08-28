@@ -13,6 +13,7 @@ import Carousel from "../components/Carousel"
 import Feautures from "../components/Feautures"
 import Questions from "../components/Questions"
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom"
 
 
 const smallScreenStyles = {
@@ -48,14 +49,14 @@ export default function Home() {
                     <div className="flex gap-5">
                         <button className="flex items-center gap-2 bg-[#5142fc] text-white font-bold py-2.5 px-6 rounded-lg">
                             <BsFillRocketFill />
-                            <a>Explore</a>
+                            <Link to="/collection">Explore</Link>
 
                         </button>
 
                         <button className="flex items-center gap-2 bg-transparent hover:bg-[#5142fc] text-blue-700 font-semibold hover:text-white py-2.5 px-6 border border-[#5142fc] hover:border-transparent rounded-lg">
 
                             <LiaPenAltSolid />
-                            <a>Create NFTs</a>
+                            <Link to="/create">Create NFTs</Link>
 
                         </button>
                     </div>

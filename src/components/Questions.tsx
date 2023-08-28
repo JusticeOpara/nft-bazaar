@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion"
+import {useRef} from "react"
 
 // Interface for the individual FAQ item
 interface FaqItem {
@@ -79,8 +81,22 @@ const Questions: React.FC = () => {
         }
     };
 
+    const ref = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1.33 1"]
+    })
+    const yRange = [0, 1]
+    const vRange = [0.6, 1]
+    const xRange = [0, 1]
+    const opacityRange = [0.8, 1]
+    const scaleProgess = useTransform(scrollYProgress, xRange, opacityRange)
+    const opacityProgess = useTransform(scrollYProgress, yRange, vRange)
+
     return (
-        <div className="w-full bg-inherit max-md:h-[80vh] h-[100vh] flex flex-col justify-evenly items-center">
+        <motion.div ref={ref}
+        style={{scale: scaleProgess,opacity: opacityProgess}}
+        className="w-full bg-inherit max-md:h-[80vh] h-[100vh] flex flex-col justify-evenly items-center">
             
                 <h1 className="font-bold text-2xl text-center">
                     Frequently Asked <span className="hero">Questions</span>
@@ -97,7 +113,7 @@ const Questions: React.FC = () => {
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

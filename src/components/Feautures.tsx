@@ -1,10 +1,11 @@
 import React from "react"
-// import img1 from "../assets/images/img13.webp"
-// import img2 from "../assets/images/blink.webp"
 import img from "../assets/images/img05.avif"
 import showcase from "../assets/images/showcase-6.gif"
  import { motion, useScroll, useTransform } from "framer-motion"
 import {useRef} from "react"
+
+
+
 const Feautures: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({

@@ -1,11 +1,13 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom'
+
 
 
 const Community: React.FC = () => {
     return (
         <motion.div
-            className="font-poppins text-white bg-green-100  "
+            className="font-poppins text-white "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
@@ -15,7 +17,7 @@ const Community: React.FC = () => {
             </div>
 
 
-            <div className='flex flex-col justify-evenly items-center bg-slate-600 h-[100vh] w-full m-0'>
+            <div className='flex flex-col justify-evenly items-center bg-inherit h-[100vh] w-full m-0'>
                 <div className='flex gap-8'>
                     <p className="font-bold w-[33.33%] text-[180px] ">4</p>
 
@@ -25,9 +27,14 @@ const Community: React.FC = () => {
                 </div>
 
                 <div className=''>
-                    <p className='font-black text-5xl'>This Page Is Not Available Yet</p>
+                    <p className='font-black text-5xl max-md:text-lg'>This Page Is Not Available Yet</p>
                 </div>
-                <button className='border-0 flex justify-center rounded-xl text-base py-[17px] px-[24px] font-bold bg-blue-500'> Navigate back home</button>
+                <button className='border-0 flex justify-center rounded-xl text-base py-[17px] px-[24px] font-bold bg-blue-500'>
+                    <Link to="/">
+                        Navigate back home
+                    </Link>
+
+                </button>
 
 
             </div>
