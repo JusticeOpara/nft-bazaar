@@ -62,7 +62,7 @@ export default function Home() {
                     </div>
 
 
-                </div >
+                </div>
 
                 <div className="w-[500px] h-[357.14px] max-md:hidden">
                     <img src={rainbow}
@@ -70,7 +70,7 @@ export default function Home() {
                 </div>
 
             </div >
-            <div className="flex flex-col items-center w-full gap-3 mt-10 max-md:mt-0">
+            <div className="flex flex-col items-center w-full gap-3 mt-10 max-md:my-10 ">
                 <p className="text-[25px] max-md:text-lg  font-black">Our Amazing Partner</p>
 
                 <div className="flex items-center font-poppins w-full justify-evenly">
