@@ -2,7 +2,7 @@
 
 NFT Bazzar is a fully responsive nft marketplace website, responsive for all devices, built using HTML, CSS, JavaScript, React and TypeScript.
 
-- [👉🏼 Live Demo](https://codewithsadee)
+- [👉🏼 Live Demo](https://github.com/JusticeOpara/nft-bazaar.git)
 
 ## Demo ScreenShots
 
