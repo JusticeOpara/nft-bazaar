@@ -15,11 +15,7 @@ const Community: React.FC = () => {
             <div className="flex justify-center pt-[150px] h-[50vh] w-full items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
                 <p className="text-4xl font-bold"> Communities</p>
             </div>
-            <div className="flex justify-center pt-[150px] h-[50vh] items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
-        <p className="text-4xl font-bold">Create Your Own NFT</p>
-      </div>
-
-
+           
 
             <div className='flex flex-col justify-evenly items-center bg-inherit h-[100vh] w-full m-0'>
                 <div className='flex gap-8'>
@@ -33,7 +29,7 @@ const Community: React.FC = () => {
                 <div className=''>
                     <p className='font-black text-5xl max-md:text-lg'>This Page Is Not Available Yet</p>
                 </div>
-                <button className='border-0 flex justify-center rounded-xl text-base py-[17px] px-[24px] font-bold bg-blue-500'>
+                <button className='border-0 flex justify-center rounded-xl text-base py-[17px]  px-[24px] font-bold bg-blue-500'>
                     <Link to="/">
                         Navigate back home
                     </Link>

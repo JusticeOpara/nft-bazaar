@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-[2520px] px-20 max-md:px-0 font-poppins py-4 fixed w-full bg-inherit top-0 left-0 z-[111111]" ref={headerRef}>
 
 
-            <div className="flex flex-row items-center justify-between gapt-3 md:gap-0 text-white">
+            <div className="flex flex-row items-center justify-between  md:gap-0 text-white">
 
                 <Link to="/" className='flex items-center'>
                     <span className="hero bg-[linear-gradient(-45deg,#e250e5,#4b50e6,#e250e5,#4b50e6)]">

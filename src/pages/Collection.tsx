@@ -178,12 +178,11 @@ const Collection: React.FC = () => {
 								</div>
 							</div>
 
-
 							{hoveredStates[index] && (
 
 								<button
 									onClick={handleToggleModal}
-									className="bottom-0 w-full h-[40px] max-md:h-[50px] bg-[#5142fc] flex justify-center items-center rounded-lg">
+									className="bottom-0 w-full h-[40px] max-md:h-[60px] bg-[#5142fc] flex justify-center items-center rounded-lg">
 									{isModalOpen ? 'Close Modal' : 'Place Bid'}
 								</button>
 							)}
