@@ -13,7 +13,6 @@ const faqData: FaqItem[] = [
     {
         question: "What is an NFT?",
         answer: "An NFT, or Non-Fungible Token, is a unique digital asset that represents ownership of a specific item, artwork, video, music, collectible, or any other digital content on a blockchain."
-
     },
     {
         question: "How do NFTS work ?",
@@ -96,9 +95,9 @@ const Questions: React.FC = () => {
     return (
         <motion.div ref={ref}
         style={{scale: scaleProgess,opacity: opacityProgess}}
-        className="w-full bg-inherit max-md:h-[80vh] h-[100vh] flex flex-col justify-evenly items-center">
+        className="w-full bg-inherit  h-[100vh] 2xl:h-[60vh] flex flex-col justify-evenly items-center">
             
-                <h1 className="font-bold text-2xl text-center">
+                <h1 className="font-bold text-2xl 2xl:text-4xl text-center">
                     Frequently Asked <span className="hero">Questions</span>
                 </h1>
             

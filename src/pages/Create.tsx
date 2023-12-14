@@ -17,10 +17,10 @@ const Create: React.FC = () => {
     >
 
       <div className="flex justify-center pt-[150px] h-[50vh] items-center bg-center bg-hero-pattern bg-no-repeat bg-cover relative overflow-hidden">
-        <p className="text-4xl font-bold">Create Your Own NFT</p>
+        <p className="text-4xl font-bold text-center">Create Your Own NFT</p>
       </div>
 
-      <div className="px-20 max-md:px-0 bg-[#212529] w-full h-[150vh] max-sm:h-[235vh] max-sm:justify-evenly flex justify-between pt-[50px] max-md:pt-0 max-md:flex-col">
+      <div className="px-20 max-md:px-0 bg-[#212529] w-full h-[150vh] max-sm:h-[235vh] max-sm:justify-evenly  flex justify-between pt-[50px] max-md:pt-0 max-md:flex-col">
         <div className="flex flex-col gap-2 max-gmd:bg-gray-500 max-md:w-full max-md:items-center">
           <div className="bg-gradient-to-r from-[#e250e5] to-[#4b50e6] rounded-lg w-[20rem] h-[25rem] flex justify-center items-center border">
 
