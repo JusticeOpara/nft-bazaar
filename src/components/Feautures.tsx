@@ -1,5 +1,5 @@
 import React from "react"
-import img from "../assets/images/img05.avif"
+import img from "../assets/images/blocknft.avif"
 import showcase from "../assets/images/showcase-6.gif"
 //  import { motion, useScroll, useTransform } from "framer-motion"
 // import {useRef} from "react"
@@ -24,9 +24,9 @@ const Feautures: React.FC = () => {
         //     style={{scale: scaleProgess,opacity: opacityProgess}}
         
         //     className="w-full ">
-        <div>
-            <div className="h-[100vh] w-full flex justify-between items-center max-md:h-[60vh]">
-                <div className="w-[40%] h-[80%] ">
+        <div className="flex flex-col gap-12">
+            <div className="h-[100%] w-full flex justify-between items-center ">
+                <div className="w-[40%] h-[50%]">
                     <img src={showcase} className="h-full w-full rounded-xl" alt="nft print" />
                 </div>
 
@@ -47,7 +47,7 @@ const Feautures: React.FC = () => {
 
             </div>
 
-            <div className=" h-[100vh] w-full flex justify-between items-center max-md:h-[60vh]">
+            <div className=" h-[100%] w-full flex justify-between items-center ">
 
                 <div className="w-[40%] h-[80%] gap-8 flex flex-col justify-center max-md:gap-4">
                     <h1 className="text-2xl max-md:text-lg font-bold hero 2xl:text-4xl">Security Audit</h1>
@@ -62,8 +62,8 @@ const Feautures: React.FC = () => {
                     <button className="flex items-center w-[130px] max-md:text-sm bg-[#5142fc] hover:bg-blue-500 text-white font-bold py-2.5 justify-center rounded-lg">Read more</button>
                 </div>
 
-                <div className="w-[40%] max-md:w-[45%] h-[80%]">
-                    <img src={img} className="h-full w-full rounded-xl" alt="nft print" />
+                <div className="w-[40%] h-[50%]">
+                <img src={img} className="h-full w-full rounded-xl" alt="nft print" />
                 </div>
 
 

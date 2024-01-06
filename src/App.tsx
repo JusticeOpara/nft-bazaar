@@ -9,10 +9,7 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      <div className='brg-[#212529]  
-          
-          max-md:px-2
-          font-poppins'>
+      <div className='brg-[#212529] max-md:px-6 font-poppins'>
         <Navbar />
         <AnimatedRoutes />
 

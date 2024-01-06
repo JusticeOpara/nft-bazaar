@@ -95,7 +95,7 @@ const Questions: React.FC = () => {
     return (
         <motion.div ref={ref}
         style={{scale: scaleProgess,opacity: opacityProgess}}
-        className="w-full bg-inherit  h-[100vh] 2xl:h-[60vh] flex flex-col justify-evenly items-center">
+        className="w-full bg-inherit max-sm:h-[60vh]  h-[100vh] 2xl:h-[60vh] flex flex-col justify-evenly items-center">
             
                 <h1 className="font-bold text-2xl 2xl:text-4xl text-center">
                     Frequently Asked <span className="hero">Questions</span>

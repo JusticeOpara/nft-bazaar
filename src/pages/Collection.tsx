@@ -94,7 +94,7 @@ const Collection: React.FC = () => {
 				<p className="text-4xl font-bold text-white"> Collection</p>
 			</div>
 
-			<div className="w-full pt-2 flex items-center justify-between px-20 gap-6">
+			<div className="w-full pt-2 flex items-center justify-between lg:px-20 px-0 max-sm:gap-2 gap-6">
 				<div className='bg-gray-300 rounded-xl'>
 					<BsFilter size={40} />
 				</div>

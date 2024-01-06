@@ -2,8 +2,9 @@ import React from "react"
 import { RiNftFill } from "react-icons/ri";
 
 const Footer: React.FC = () => {
+    
     return (
-        <div className="h-[50vh] max-md:h-[100vh] flex flex-col justify-center w-full px-20 max-md:px-0 bg-black">
+        <div className="h-[50vh] max-md:h-[100vh] flex flex-col justify-center w-full px-20 max-md:px-0 bg-black pb-8">
             <div className="flex justify-between max-md:flex-col max-md:items-start max-md:justify-evenly h-full w-full items-center font-poppins text-white">
 
                 <div className="flex flex-col gap-3 items-start">

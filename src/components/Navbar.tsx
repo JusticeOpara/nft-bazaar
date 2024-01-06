@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
 
 
 
-                <div className="relative max-sm:hidden">
+                <div className="relative max-md:hidden">
                     <div className="flex flex-row items-center gap-2">
 
                         <div className='flex items-center py-[7px] px-[20px] border-[1px] border-[#5142fc] rounded-[50px] max-md:hidden'>
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
                 </div>
 
 
-                <div onClick={handleNav} className='max-sm:block top-2 right-[20px] w-10 hidden'>
+                <div onClick={handleNav} className='max-md:block top-2 right-[20px] w-10 hidden'>
                     {isNavExpanded ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={23} />}
                 </div>
                 <div className={isNavExpanded ? 'leading-loose h-max text-xl absolute left-0 top-0 w-full mx-auto z-10 flex mt-16 bg-primary ease-in-out flex-col' : 'bg-blue-800 absolute left-[-100%]'
